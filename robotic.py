@@ -15,8 +15,8 @@ def init_capteur():
 	GPIO.output(TRIG,False)
 
 	print "Waiting for  Sensor To settle"
-	time.sleep(2)
-	return
+
+	return;
 def check_distance():
 
 
