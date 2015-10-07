@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from time import sleep
+import time
  
 
 
@@ -22,7 +22,7 @@ def check_distance():
 	ECHO = 12
 
 	GPIO.output(TRIG,True)
-	sleep (0.00001)
+	time.sleep (0.00001)
 	GPIO.output(TRIG, False)
 	while GPIO.input(ECHO) ==0:
 		pulse_start = time.time()
@@ -113,13 +113,13 @@ while True:
 
 	if (distance >= 10):
 		avancer()
-		sleep(1)
+		time.sleep(1)
 	else:
 		while (distance >= 10):
 			droite()
 			distance = check_distance()
 		avancer()
-		sleep(1)
+		time.sleep(1)
 GPIO.cleanup()
 
 	
