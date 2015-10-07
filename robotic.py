@@ -155,6 +155,7 @@ while True:
 		while (distance < 10):
 			droite()
 			distance = check_distance()
+			time.sleep(0.0001)
 		avancer()
 		time.sleep(1)
 GPIO.cleanup()
