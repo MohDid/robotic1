@@ -18,7 +18,8 @@ def init_capteur():
 
 	return;
 def check_distance():
-
+	TRIG = 7 
+	ECHO = 12
 
 	GPIO.output(TRIG,True)
 	time.sleep (0.00001)
