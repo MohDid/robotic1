@@ -33,7 +33,7 @@ def check_distance():
 	distance = round(distance, 2)
 	
 	print "Distance:",distance,"cm"
-	time.sleep(1)
+	time.sleep(0.1)
 	return distance;
 
  
@@ -150,14 +150,14 @@ while True:
 
 	if (distance >= 10):
 		avancer()
-		time.sleep(1)
+		time.sleep(0.5)
 	else:
 		while (distance < 10):
 			droite()
 			distance = check_distance()
 			time.sleep(0.0001)
 		avancer()
-		time.sleep(1)
+		time.sleep(0.5)
 GPIO.cleanup()
 
 	
