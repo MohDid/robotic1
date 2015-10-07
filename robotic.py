@@ -31,7 +31,8 @@ def check_distance():
 	pulse_duration = pulse_end - pulse_start
 	distance = pulse_duration * 17150
 	distance = round(distance, 2)
-	print "distance = " distance
+	
+	print "Distance:",distance,"cm"
 
 	return distance;
 
