@@ -3,8 +3,8 @@ import time
 
 GPIO.setmode (GPIO.BCM)
 
-TRIG = 23
-ECHO = 24
+TRIG = 04 
+ECHO = 18
 
 print "distance Measurement In Progress"
 
@@ -18,7 +18,6 @@ while True:
 	GPIO.output(TRIG,True)
 	time.sleep (0.00001)
 	GPIO.output(TRIG, False)
-
 	while GPIO.input(ECHO) ==0:
 		pulse_start = time.time()
 	while GPIO.input(ECHO) ==1:
