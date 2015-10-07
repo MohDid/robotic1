@@ -33,7 +33,7 @@ def check_distance():
 	distance = round(distance, 2)
 	
 	print "Distance:",distance,"cm"
-	time.sleep(0.1)
+	time.sleep(0.05)
 	return distance;
 
  
@@ -148,16 +148,16 @@ init_moteur()
 while True: 	
 	distance = check_distance()
 
-	if (distance >= 10):
+	if (distance >= 30):
 		avancer()
-		time.sleep(0.1)
+		time.sleep(0.05)
 	else:
-		while (distance < 10):
+		while (distance < 30):
 			droite()
 			distance = check_distance()
 			time.sleep(0.0001)
 		avancer()
-		time.sleep(0.1)
+		time.sleep(0.05)
 GPIO.cleanup()
 
 	
