@@ -33,7 +33,7 @@ def check_distance():
 	distance = round(distance, 2)
 	
 	print "Distance:",distance,"cm"
-
+	time.sleep(1)
 	return distance;
 
  
