@@ -152,7 +152,7 @@ while True:
 		avancer()
 		time.sleep(1)
 	else:
-		while (distance >= 10):
+		while (distance < 10):
 			droite()
 			distance = check_distance()
 		avancer()
