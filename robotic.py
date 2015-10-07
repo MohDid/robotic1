@@ -1,21 +1,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
  
-GPIO.setmode(GPIO.BOARD)
-init_capteur()
-init_moteur()
-while True: 	
-	distance = check_distance()
 
-	if (distance >= 10):
-		avancer()
-		time.sleep(1)
-	else:
-		while (distance >= 10):
-			droite()
-			distance = check_distance()
-		avancer()
-		time.sleep(1)
 
 	
 def init_capteur():
@@ -115,6 +101,23 @@ def stop():
 	print "Now stop"
 	GPIO.output(Motor1E,GPIO.LOW)
 	GPIO.output(Motor2E,GPIO.LOW)
+	
+	
+GPIO.setmode(GPIO.BOARD)
+init_capteur()
+init_moteur()
+while True: 	
+	distance = check_distance()
 
+	if (distance >= 10):
+		avancer()
+		time.sleep(1)
+	else:
+		while (distance >= 10):
+			droite()
+			distance = check_distance()
+		avancer()
+		time.sleep(1)
 GPIO.cleanup()
+
 	
