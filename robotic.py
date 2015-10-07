@@ -57,6 +57,13 @@ def init_moteur():
 	return;
 	
 def avancer():
+	Motor1A = 16
+	Motor1B = 18
+	Motor1E = 22
+	
+	Motor2A = 15
+	Motor2B = 13
+	Motor2E = 11
 	print "Going forwards"
 	GPIO.output(Motor1A,GPIO.HIGH)
 	GPIO.output(Motor1B,GPIO.LOW)
@@ -68,6 +75,13 @@ def avancer():
 	
 	return;
 def reculer():	
+	Motor1A = 16
+	Motor1B = 18
+	Motor1E = 22
+	
+	Motor2A = 15
+	Motor2B = 13
+	Motor2E = 11
 	print "Going backwards"
 	GPIO.output(Motor1A,GPIO.LOW)
 	GPIO.output(Motor1B,GPIO.HIGH)
@@ -80,6 +94,13 @@ def reculer():
 	return;
 	
 def droite():
+	Motor1A = 16
+	Motor1B = 18
+	Motor1E = 22
+	
+	Motor2A = 15
+	Motor2B = 13
+	Motor2E = 11	
 	print "Going right"
 	GPIO.output(Motor1A,GPIO.LOW)
 	GPIO.output(Motor1B,GPIO.HIGH)
@@ -90,6 +111,13 @@ def droite():
 	GPIO.output(Motor2E,GPIO.HIGH)
 	return;
 def gauche():
+	Motor1A = 16
+	Motor1B = 18
+	Motor1E = 22
+	
+	Motor2A = 15
+	Motor2B = 13
+	Motor2E = 11
 	print "Going left"
 	GPIO.output(Motor1A,GPIO.HIGH)
 	GPIO.output(Motor1B,GPIO.LOW)
@@ -100,6 +128,13 @@ def gauche():
 	GPIO.output(Motor2E,GPIO.HIGH)
 	return;
 def stop():
+	Motor1A = 16
+	Motor1B = 18
+	Motor1E = 22
+	
+	Motor2A = 15
+	Motor2B = 13
+	Motor2E = 11
 	print "Now stop"
 	GPIO.output(Motor1E,GPIO.LOW)
 	GPIO.output(Motor2E,GPIO.LOW)
