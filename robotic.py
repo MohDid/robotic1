@@ -74,7 +74,12 @@ def avancer():
 	GPIO.output(Motor2A,GPIO.HIGH)
 	GPIO.output(Motor2B,GPIO.LOW)
 	GPIO.output(Motor2E,GPIO.HIGH)
-	
+	if(codeuseR==True)
+		compt_codeuseR++
+	if(codeuseL==True)
+		compt_codeuseL++
+	if(compt_codeuseR >= 10)
+		
 	return;
 def reculer():	
 	Motor1A = 16
@@ -141,7 +146,18 @@ def stop():
 	GPIO.output(Motor1E,GPIO.LOW)
 	GPIO.output(Motor2E,GPIO.LOW)
 	return;
-	
+def stop_R():
+	Motor1A = 16
+	Motor1B = 18
+	Motor1E = 22
+	GPIO.output(Motor1E,GPIO.LOW)
+	return
+def stop_L():
+	Motor2A = 15
+	Motor2B = 13
+	Motor2E = 11
+	GPIO.output(Motor2E,GPIO.LOW)
+	return
 GPIO.setmode(GPIO.BOARD)
 init_capteur()
 init_moteur()
@@ -151,6 +167,7 @@ while True:
 	if (distance >= 30):
 		avancer()
 		time.sleep(0.05)
+		
 	else:
 		while (distance < 30):
 			droite()
